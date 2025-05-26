@@ -3,13 +3,9 @@
   "version": "1.0.0",
   "main": "index.js",
   "scripts": {
-    "test": "mocha"
+    "build": "echo 'Building the app...'", 
+    "test": "mocha app_test.js"
   },
-  "scripts": {
-  "build": "echo 'Building the app...'", 
-  "test": "mocha app_test.js"
-},
-
   "keywords": [],
   "author": "",
   "license": "ISC",
