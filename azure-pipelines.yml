@@ -18,4 +18,21 @@ steps:
 - script: |
     npm install
     npm run build
-  displayName: 'npm install and build'
+  displayName: 'Install dependencies and build'
+
+- script: |
+    npm test
+  displayName: 'Run tests with Mocha'
+
+- task: CopyFiles@2
+  inputs:
+    contents: '**'
+    targetFolder: '$(Build.ArtifactStagingDirectory)'
+  displayName: 'Copy files to artifact folder'
+
+- task: PublishBuildArtifacts@1
+  inputs:
+    pathToPublish: '$(Build.ArtifactStagingDirectory)'
+    artifactName: 'drop'
+  displayName: 'Publish artifacts'
+
