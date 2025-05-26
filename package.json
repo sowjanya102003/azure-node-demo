@@ -4,7 +4,7 @@
   "main": "index.js",
   "scripts": {
     "build": "echo 'Building the app...'", 
-    "test": "mocha app_test.js"
+    "test": "npx mocha app_test.js"
   },
   "keywords": [],
   "author": "",
