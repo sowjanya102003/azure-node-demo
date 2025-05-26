@@ -19,6 +19,9 @@ steps:
     npm install
     npm run build
   displayName: 'Install dependencies and build'
+  
+- script: chmod +x ./node_modules/.bin/mocha
+  displayName: 'Make Mocha executable'
 
 - script: |
     npm test
