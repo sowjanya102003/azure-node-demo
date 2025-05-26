@@ -5,6 +5,11 @@
   "scripts": {
     "test": "mocha"
   },
+  "scripts": {
+  "build": "echo 'Building the app...'", 
+  "test": "mocha app_test.js"
+},
+
   "keywords": [],
   "author": "",
   "license": "ISC",
